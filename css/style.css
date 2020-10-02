@@ -22,6 +22,7 @@ section{
 
 .portfolio{
     background-color: #eeeeee;
+    width: auto;
 }
 .portfolio hr{
     width: 300px;
