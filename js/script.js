@@ -21,7 +21,7 @@ $('.page-scroll').on('click', function(e){
 $(window).scroll(function(){
     var wSroll = $(this).scrollTop();
     
-    
+    // JUMBOTRON
     $('.jumbotron img').css({
         'transform' : 'translate(0px, '+ wSroll/4 +'%)'
     })
@@ -34,4 +34,8 @@ $(window).scroll(function(){
     })
 
     // PORTFOLIO
+    
+    if (wSroll > (($('.portfolio').offset().top ) - 250)) {
+        $('.portfolio .thumbnail').addClass('muncul')
+    }
 })
