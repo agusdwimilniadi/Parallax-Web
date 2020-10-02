@@ -35,7 +35,11 @@ $(window).scroll(function(){
 
     // PORTFOLIO
     
-    if (wSroll > (($('.portfolio').offset().top ) - 250)) {
-        $('.portfolio .thumbnail').addClass('muncul')
+    if (wSroll > (($('.portfolio').offset().top ) - 200)) {
+        $('.portfolio .thumbnail').each(function(i){
+            setTimeout(function(){
+                $('.portfolio .thumbnail').eq(i).addClass('muncul');
+            }, 150 *(i));
+        })
     }
 })
